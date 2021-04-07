@@ -164,6 +164,9 @@ class CustomFieldModelFactory
             case CustomFieldModel::TYPE_TEXT:
                 $model = new TextCustomFieldModel();
                 break;
+            case CustomFieldModel::TYPE_LINKED_ENTITY:
+                $model = new LinkedEntityCustomFieldModel();
+                break;
             case CustomFieldModel::TYPE_URL:
                 $model = new UrlCustomFieldModel();
                 break;
@@ -178,9 +181,6 @@ class CustomFieldModelFactory
                 break;
             case CustomFieldModel::TYPE_TRACKING_DATA:
                 $model = new TrackingDataCustomFieldModel();
-                break;
-            case CustomFieldModel::TYPE_LINKED_ENTITY:
-                $model = new LinkedEntityCustomFieldModel();
                 break;
         }
 
