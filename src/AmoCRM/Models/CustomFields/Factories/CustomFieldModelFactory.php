@@ -2,6 +2,8 @@
 
 namespace AmoCRM\Models\CustomFields\Factories;
 
+use AmoCRM\AmoCRM\Models\CustomFields\LinkedEntityCustomFieldModel;
+use AmoCRM\AmoCRM\Models\CustomFields\LinkedEntitytCustomFieldModel;
 use AmoCRM\AmoCRM\Models\CustomFields\TrackingDataCustomFieldModel;
 use AmoCRM\Exceptions\BadTypeException;
 use AmoCRM\Models\CustomFields\BirthdayCustomFieldModel;
@@ -77,6 +79,9 @@ class CustomFieldModelFactory
                 break;
             case CustomFieldModel::TYPE_STREET_ADDRESS:
                 $model = StreetAddressCustomFieldModel::fromArray($field);
+                break;
+            case CustomFieldModel::TYPE_LINKED_ENTITY:
+                $model = LinkedEntityCustomFieldModel::fromArray($field);
                 break;
             case CustomFieldModel::TYPE_TEXTAREA:
                 $model = TextareaCustomFieldModel::fromArray($field);
@@ -173,6 +178,9 @@ class CustomFieldModelFactory
                 break;
             case CustomFieldModel::TYPE_TRACKING_DATA:
                 $model = new TrackingDataCustomFieldModel();
+                break;
+            case CustomFieldModel::TYPE_LINKED_ENTITY:
+                $model = new LinkedEntityCustomFieldModel();
                 break;
         }
 

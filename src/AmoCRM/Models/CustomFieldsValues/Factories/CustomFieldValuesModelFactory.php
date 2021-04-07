@@ -2,6 +2,7 @@
 
 namespace AmoCRM\Models\CustomFieldsValues\Factories;
 
+use AmoCRM\AmoCRM\Models\CustomFieldsValues\LinkedEntityCustomFieldValuesModel;
 use AmoCRM\AmoCRM\Models\CustomFieldsValues\TrackingDataCustomFieldValuesModel;
 use AmoCRM\Models\CustomFields\CustomFieldModel;
 use AmoCRM\Models\CustomFieldsValues\BaseCustomFieldValuesModel;
@@ -92,6 +93,9 @@ class CustomFieldValuesModelFactory
                 break;
             case CustomFieldModel::TYPE_ITEMS:
                 $model = new ItemsCustomFieldValuesModel();
+                break;
+            case CustomFieldModel::TYPE_LINKED_ENTITY:
+                $model = new LinkedEntityCustomFieldValuesModel();
                 break;
             case CustomFieldModel::TYPE_CATEGORY:
                 $model = new CategoryCustomFieldValuesModel();

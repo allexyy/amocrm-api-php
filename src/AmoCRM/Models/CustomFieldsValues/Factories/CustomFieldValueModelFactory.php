@@ -2,6 +2,7 @@
 
 namespace AmoCRM\Models\CustomFieldsValues\Factories;
 
+use AmoCRM\AmoCRM\Models\CustomFieldsValues\ValueModels\LinkedEntityCustomFieldValueModel;
 use AmoCRM\AmoCRM\Models\CustomFieldsValues\ValueModels\TrackingDataCustomFieldValueModel;
 use AmoCRM\Exceptions\BadTypeException;
 use AmoCRM\Helpers\CustomFieldHelper;
@@ -92,6 +93,9 @@ class CustomFieldValueModelFactory
                 break;
             case CustomFieldModel::TYPE_ITEMS:
                 $model = new ItemsCustomFieldValueModel();
+                break;
+            case CustomFieldModel::TYPE_LINKED_ENTITY:
+                $model = new LinkedEntityCustomFieldValueModel();
                 break;
             case CustomFieldModel::TYPE_CATEGORY:
                 $model = new CategoryCustomFieldValueModel();

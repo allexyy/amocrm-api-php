@@ -2,6 +2,7 @@
 
 namespace AmoCRM\Models\CustomFieldsValues\Factories;
 
+use AmoCRM\AmoCRM\Models\CustomFieldsValues\ValueCollections\LinkedEntityCustomFieldValueCollection;
 use AmoCRM\AmoCRM\Models\CustomFieldsValues\ValueCollections\TrackingDataCustomFieldValueCollection;
 use AmoCRM\Exceptions\BadTypeException;
 use AmoCRM\Helpers\CustomFieldHelper;
@@ -92,6 +93,9 @@ class CustomFieldValueCollectionFactory
                 break;
             case CustomFieldModel::TYPE_ITEMS:
                 $collection = new ItemsCustomFieldValueCollection();
+                break;
+            case CustomFieldModel::TYPE_LINKED_ENTITY:
+                $collection = new LinkedEntityCustomFieldValueCollection();
                 break;
             case CustomFieldModel::TYPE_CATEGORY:
                 $collection = new CategoryCustomFieldValueCollection();
