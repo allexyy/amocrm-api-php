@@ -3,7 +3,6 @@
 namespace AmoCRM\Models\CustomFields\Factories;
 
 use AmoCRM\AmoCRM\Models\CustomFields\LinkedEntityCustomFieldModel;
-use AmoCRM\AmoCRM\Models\CustomFields\LinkedEntitytCustomFieldModel;
 use AmoCRM\AmoCRM\Models\CustomFields\TrackingDataCustomFieldModel;
 use AmoCRM\Exceptions\BadTypeException;
 use AmoCRM\Models\CustomFields\BirthdayCustomFieldModel;
